@@ -19,6 +19,7 @@ type CommandLineInput struct {
 	sbomPath   string
 	configPath string
 	numWorkers int
+	runMode    string
 }
 
 func main() {
@@ -48,8 +49,7 @@ func main() {
 	deprecClient := deprec.NewClient(config)
 
 	runConfig := deprec.RunConfig{
-		Mode: deprec.Linear,
-		//Mode:       Parallel,
+		Mode:       deprec.RunMode(input.runMode),
 		NumWorkers: input.numWorkers,
 	}
 
@@ -69,8 +69,12 @@ func getInput() (*CommandLineInput, error) {
 	if err != nil {
 		workers = 5
 	}
+	runMode := flag.Arg(3)
+	if runMode != "parallel" {
+		runMode = "linear"
+	}
 
-	return &CommandLineInput{sbom, config, workers}, nil
+	return &CommandLineInput{sbom, config, workers, runMode}, nil
 }
 
 func exitGracefully(err error) {
