@@ -2,11 +2,9 @@ module github.com/a-grasso/deprec-cli
 
 go 1.19
 
-replace github.com/a-grasso/deprec v1.0.0 => ./../deprec
-
 require (
 	github.com/CycloneDX/cyclonedx-go v0.7.0
-	github.com/a-grasso/deprec v1.0.0
+	github.com/a-grasso/deprec v0.0.0-20230131183720-0e0279e4bb18
 )
 
 require (
