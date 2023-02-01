@@ -4,7 +4,5 @@ CLI tool for using deprec
 ## installation
 
 ```bash
-wget https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_Linux_x86_64.tar.gz
-
-tar -xf deprec-cli_Linux_x86_64.tar.gz
+wget https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_Linux_x86_64
 ```
