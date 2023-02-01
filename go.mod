@@ -1,13 +1,15 @@
-module deprec-cli
+module github.com/a-grasso/deprec-cli
 
 go 1.19
 
 replace github.com/a-grasso/deprec v1.0.0 => ./../deprec
 
-require github.com/a-grasso/deprec v1.0.0
+require (
+	github.com/CycloneDX/cyclonedx-go v0.7.0
+	github.com/a-grasso/deprec v1.0.0
+)
 
 require (
-	github.com/CycloneDX/cyclonedx-go v0.7.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
 	github.com/google/go-github/v48 v48.1.0 // indirect
