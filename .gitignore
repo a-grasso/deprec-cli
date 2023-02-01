@@ -25,3 +25,5 @@ dumps/*23/
 dumps/*
 /deprec
 /save.txt
+
+dist/
