@@ -70,7 +70,7 @@ func writeToOutputFile(outputFile string, result *deprec.Result) {
 	defer f.Close()
 
 	for _, r := range result.Results {
-		_, err = f.WriteString(fmt.Sprintf("%s:%s --%s->> %s\n\n", r.Dependency.Name, r.Dependency.Version, r.DataSources, r.RecommendationsInsights()))
+		_, err = f.WriteString(fmt.Sprintf("%s:%s --%s ||| %s->> %s\n\n", r.Dependency.Name, r.Dependency.Version, r.DataSources, r.UsedCores(), r.RecommendationsInsights()))
 
 		if err != nil {
 			logging.SugaredLogger.Errorf("could not write to outputfile %s: %s", outputFile, err)
