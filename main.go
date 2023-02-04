@@ -20,6 +20,7 @@ type CommandLineInput struct {
 	configPath string
 	numWorkers int
 	runMode    string
+	outputFile string
 }
 
 func main() {
@@ -53,7 +54,28 @@ func main() {
 		NumWorkers: input.numWorkers,
 	}
 
-	deprecClient.Run(cdxBom, runConfig)
+	result := deprecClient.Run(cdxBom, runConfig)
+
+	writeToOutputFile(input.outputFile, result)
+}
+
+func writeToOutputFile(outputFile string, result *deprec.Result) {
+
+	f, err := os.Create(outputFile)
+
+	if err != nil {
+		logging.SugaredLogger.Errorf("could not create outputfile %s: %s", outputFile, err)
+	}
+
+	defer f.Close()
+
+	for _, r := range result.Results {
+		_, err = f.WriteString(fmt.Sprintf("%s:%s --%s->> %s\n\n", r.Dependency.Name, r.Dependency.Version, r.DataSources, r.RecommendationsInsights()))
+
+		if err != nil {
+			logging.SugaredLogger.Errorf("could not write to outputfile %s: %s", outputFile, err)
+		}
+	}
 }
 
 func getInput() (*CommandLineInput, error) {
@@ -65,16 +87,20 @@ func getInput() (*CommandLineInput, error) {
 
 	sbom := flag.Arg(0)
 	config := flag.Arg(1)
-	workers, err := strconv.Atoi(flag.Arg(2))
+	output := flag.Arg(2)
+	if output == "" {
+		output = "deprec-output.txt"
+	}
+	workers, err := strconv.Atoi(flag.Arg(3))
 	if err != nil {
 		workers = 5
 	}
-	runMode := flag.Arg(3)
+	runMode := flag.Arg(4)
 	if runMode != "parallel" {
 		runMode = "linear"
 	}
 
-	return &CommandLineInput{sbom, config, workers, runMode}, nil
+	return &CommandLineInput{sbom, config, workers, runMode, output}, nil
 }
 
 func exitGracefully(err error) {
@@ -130,7 +156,6 @@ func parseExternalReference(component cdx.Component) map[model.ExternalReference
 	references := component.ExternalReferences
 
 	if references == nil {
-		logging.SugaredLogger.Infof("SBOM component '%s' has no external references", component.Name)
 		return nil
 	}
 
