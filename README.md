@@ -29,8 +29,7 @@ docker-compose up -d
 ```
 !!Adjust the config.json accordingly if cache is activated (URI, Username and Password).
 
-
-## configuration
+### configuration
 
 The config.template.json is prefilled with configuration regarding tweeking of evaluation inside of _deprec_.
 
