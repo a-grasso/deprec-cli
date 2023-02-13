@@ -19,6 +19,26 @@ wget https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_
 - OPTIONAL number of workers = number of concurrent dependencies to be processed
 - OPTIONAL runMode = "linear" OR "parellel" processing of dependencies
 
+### caching
+
+A cache can be started to help with processing and performance, though it is not necessary for the functionality.
+
+The mongodb cache can be started with:
+```bash
+docker-compose up -d
+```
+!!Adjust the config.json accordingly if cache is activated (URI, Username and Password).
+
+
+## configuration
+
+The config.template.json is prefilled with configuration regarding tweeking of evaluation inside of _deprec_.
+
+To adjust are following configurations:
+- Extraction
+  - GitHub -> GitHub API Token
+  - OSSIndex -> Username and Token
+
 ## local build
 
 ```bash
