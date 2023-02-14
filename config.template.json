@@ -51,6 +51,7 @@
     },
     "CoreTeam": {
       "ActiveContributorsPercentile": 5,
+      "ActiveContributorsThresholdPercentage": 10,
       "CoreTeamStrengthThresholdPercentage": 10
     }
   }
