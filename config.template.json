@@ -34,8 +34,6 @@
     "Recentness": {
       "ReleaseLimit": 4,
       "CommitLimit": 24,
-      "ArtifactLimit": 12,
-      "LibraryLimit": 4,
       "TimeframePercentileCommits": 2,
       "TimeframePercentileReleases": 1
     },
