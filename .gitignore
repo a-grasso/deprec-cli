@@ -16,7 +16,8 @@
 
 .idea
 
-*config.json
+config.json
+.env
 
 deprec-cli
 

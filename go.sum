@@ -1,7 +1,5 @@
 github.com/CycloneDX/cyclonedx-go v0.7.0 h1:jNxp8hL7UpcvPDFXjY+Y1ibFtsW+e5zyF9QoSmhK/zg=
 github.com/CycloneDX/cyclonedx-go v0.7.0/go.mod h1:W5Z9w8pTTL+t+yG3PCiFRGlr8PUlE0pGWzKSJbsyXkg=
-github.com/a-grasso/deprec v0.0.0-20230131183720-0e0279e4bb18 h1:VMV0HO7xLAh5IS5xHl8hq500ZSVHiiqhdPYCMSNy3vo=
-github.com/a-grasso/deprec v0.0.0-20230131183720-0e0279e4bb18/go.mod h1:VX+NBbjUlWIZ6GxicuuUUs19rbdRFHucNmdG0oKTkxI=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/bradleyjkemp/cupaloy/v2 v2.8.0 h1:any4BmKE+jGIaMpnU8YgH/I2LPiLBufr6oMMlVBbn9M=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -24,6 +22,8 @@ github.com/google/go-querystring v1.1.0 h1:AnCroh3fv4ZBgVIf1Iwtovgjaw/GiKJo8M8yD
 github.com/google/go-querystring v1.1.0/go.mod h1:Kcdr2DB4koayq7X8pmAG4sNG59So17icRSOU623lUBU=
 github.com/jarcoal/httpmock v1.0.8 h1:8kI16SoO6LQKgPE7PvQuV+YuD/inwHd7fOOe2zMbo4k=
 github.com/jarcoal/httpmock v1.0.8/go.mod h1:ATjnClrvW/3tijVmpL/va5Z3aAyGvqU3gCT8nX0Txik=
+github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
+github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
 github.com/klauspost/compress v1.13.6 h1:P76CopJELS0TiO2mebmnzgWaajssP/EszplttgQxcgc=
 github.com/klauspost/compress v1.13.6/go.mod h1:/3/Vjq9QcHkK5uEr5lBEmyoZ1iFhe47etQ6QUkpK6sk=
 github.com/kr/pretty v0.1.0 h1:L/CwN0zerZDmRFUapSPitk6f+Q3+0za1rQkzVuMiMFI=
