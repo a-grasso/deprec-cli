@@ -17,7 +17,7 @@
   "Recentness": {
     "ReleaseLimit": 4,
     "CommitLimit": 24,
-    "TimeframePercentileCommits": 2,
+    "TimeframePercentileCommits": 2
   },
   "Processing": {
     "ClosingTimeLimit": 2,
