@@ -1,37 +1,175 @@
 {
-  "OrgBackup": {
-    "CompanyThreshold": 10,
-    "SponsorThreshold": 10,
-    "OrganizationThreshold": 10
+  "CombCon": {
+    "Weights": {
+      "DeityGiven": 100,
+      "Effort": 5,
+      "Circumstances": 1,
+      "Support": 1,
+      "Community": 1,
+      "Interconnectedness": 1,
+      "Ecosystem": 0
+    }
   },
-  "ThirdPartyParticipation": {
-    "CommitLimit": 2,
-    "ThirdPartyCommitThresholdPercentage": 80
+  "DeityGiven": {
+    "Weights": {
+      "Marking": 1,
+      "Vulnerabilities": 1
+    }
   },
-  "Engagement": {
-    "IssueCommentsRatioThresholdPercentage": 325
+  "Circumstances": {
+    "Weights": {
+      "Rivalry": 1,
+      "Licensing": 1,
+      "ProjectQuality": 1
+    }
+  },
+  "Effort": {
+    "Weights": {
+      "Recentness": 2,
+      "Activity": 2,
+      "CoreTeam": 1
+    }
+  },
+  "Support": {
+    "Weights": {
+      "Engagement": 1,
+      "Processing": 2
+    }
+  },
+  "Community": {
+    "Weights": {
+      "Prestige": 1,
+      "Backup": 3,
+      "Participation": 1
+    }
+  },
+  "Interconnectedness": {
+    "Weights": {
+      "Popularity": 1,
+      "Network": 1
+    }
+  },
+  "Marking": {
+    "ReadMeKeywords": [
+      "end-of-life"
+    ],
+    "AboutKeywords": [
+      "end-of-life",
+      "deprecated",
+      "abandoned"
+    ],
+    "ArtifactDescriptionKeywords": [
+      "end-of-life",
+      "deprecated",
+      "abandoned"
+    ],
+    "Weights": {
+      "ReadMe": 1,
+      "Archivation": 1,
+      "About": 1,
+      "Artifact": 1
+    }
+  },
+  "ProjectQuality": {
+    "Weights": {
+      "ReadMe": 1,
+      "License": 1,
+      "About": 1,
+      "AllowForking": 1
+    }
+  },
+  "Vulnerabilities": {
+    "Weights": {
+      "CVE": 1
+    }
+  },
+  "Rivalry": {
+    "Weights": {
+      "IsLatest": 1
+    }
+  },
+  "Licensing": {
+    "Weights": {
+      "Repository": 1,
+      "Artifact": 2,
+      "Library": 1
+    }
+  },
+  "Prestige": {
+    "Weights": {
+      "Contributors": 1
+    }
   },
   "Activity": {
-    "Percentile": 20
+    "Percentile": 20,
+    "Weights": {
+      "Commits": 3,
+      "Releases": 3,
+      "Issues": 2,
+      "IssueContributions": 1
+    }
+  },
+  "Participation": {
+    "CommitLimit": 2,
+    "ThirdPartyCommitThresholdPercentage": 80,
+    "Weights": {
+      "ThirdPartyCommits": 1
+    }
+  },
+  "Network": {
+    "Threshold": 2000,
+    "Weights": {
+      "RepositoryNetwork": 1
+    }
+  },
+  "Popularity": {
+    "Threshold": 2000,
+    "Weights": {
+      "RepositoryPopularity": 1
+    }
   },
   "Recentness": {
     "ReleaseLimit": 4,
     "CommitLimit": 24,
-    "TimeframePercentileCommits": 2
+    "TimeframePercentileCommits": 2,
+    "Weights": {
+      "MonthsSinceLastCommit": 2,
+      "AverageMonthsSinceLastCommits": 3,
+      "MonthsSinceLastRelease": 2
+    }
   },
   "Processing": {
     "ClosingTimeLimit": 2,
-    "BurnPercentile": 20
+    "BurnPercentile": 20,
+    "Weights": {
+      "AverageClosingTime": 2,
+      "Burn": 2
+    }
   },
-  "Network": {
-    "Threshold": 2000
+  "Engagement": {
+    "IssueCommentsRatioThresholdPercentage": 325,
+    "Weights": {
+      "IssueCommentsRatio": 1
+    }
   },
-  "Popularity": {
-    "Threshold": 2000
+  "Backup": {
+    "CompanyThreshold": 10,
+    "SponsorThreshold": 10,
+    "OrganizationThreshold": 10,
+    "Weights": {
+      "Companies": 2,
+      "Sponsors": 1,
+      "Organizations": 2,
+      "RepositoryOrganization": 3
+    }
   },
   "CoreTeam": {
     "ActiveContributorsPercentile": 5,
     "ActiveContributorsThresholdPercentage": 10,
-    "CoreTeamStrengthThresholdPercentage": 10
+    "CoreTeamStrengthThresholdPercentage": 10,
+    "Weights": {
+      "ActiveContributors": 2,
+      "CoreTeamStrength": 1
+    }
   }
 }
