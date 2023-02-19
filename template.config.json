@@ -164,8 +164,8 @@
   },
   "CoreTeam": {
     "ActiveContributorsPercentile": 5,
-    "ActiveContributorsThresholdPercentage": 10,
-    "CoreTeamStrengthThresholdPercentage": 10,
+    "ActiveContributorsThreshold": 10,
+    "CoreTeamStrengthThreshold": 10,
     "Weights": {
       "ActiveContributors": 2,
       "CoreTeamStrength": 1
