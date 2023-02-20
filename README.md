@@ -32,7 +32,7 @@ The mongodb cache can be started with:
 ```bash
 docker-compose up -d
 ```
-!!Adjust the config.json accordingly if cache is activated (URI, Username and Password).
+!!Adjust the .env accordingly if cache is activated (URI, Username and Password).
 
 ### configuration
 
