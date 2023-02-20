@@ -70,6 +70,8 @@ func writeToOutputFile(outputFile string, result *deprec.Result) {
 
 	defer f.Close()
 
+	f.WriteString("DEV OUTPUT\n--------\n\n")
+
 	for _, r := range result.Results {
 		_, err = f.WriteString(fmt.Sprintf("%s:%s --%s ||| %s->> %s\n\n", r.Dependency.Name, r.Dependency.Version, r.DataSources, r.UsedCores(), r.RecommendationsInsights()))
 
