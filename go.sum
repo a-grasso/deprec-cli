@@ -1,7 +1,7 @@
 github.com/CycloneDX/cyclonedx-go v0.7.0 h1:jNxp8hL7UpcvPDFXjY+Y1ibFtsW+e5zyF9QoSmhK/zg=
 github.com/CycloneDX/cyclonedx-go v0.7.0/go.mod h1:W5Z9w8pTTL+t+yG3PCiFRGlr8PUlE0pGWzKSJbsyXkg=
-github.com/a-grasso/deprec v0.0.0-20230219122125-efa9224cc329 h1:ji9H2YqNl8kRl9p44ybQAM8ysmigiIIXNtqoWQ2spss=
-github.com/a-grasso/deprec v0.0.0-20230219122125-efa9224cc329/go.mod h1:4ffYq3rf2CIGujODtMRsZj9MwuMs9Twp5uxdFflSyHE=
+github.com/a-grasso/deprec v0.0.0-20230220194747-00b84f823624 h1:Ga4To01Rdbea6XWfX116EJWisigq1rS4ZkPcF+h/a4g=
+github.com/a-grasso/deprec v0.0.0-20230220194747-00b84f823624/go.mod h1:4ffYq3rf2CIGujODtMRsZj9MwuMs9Twp5uxdFflSyHE=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/bradleyjkemp/cupaloy/v2 v2.8.0 h1:any4BmKE+jGIaMpnU8YgH/I2LPiLBufr6oMMlVBbn9M=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
