@@ -10,14 +10,19 @@ wget https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_
 ## usage
 
 ```bash
-./deprec-cli <sbom-path> <config-path> <output-file-path> <number of workers> <runMode>
+Usage: ./deprec-cli [options] <sbomJson>                                         
+Options:                                                                             
+  -config string                                                                     
+        Evaluation config file (default "config.json")                               
+  -env string                                                                        
+        Environment variables file (default ".env")                                  
+  -output string                                                                     
+        Output file (default "deprec-output.txt")                                    
+  -runMode string                                                                    
+        Run mode - parallel or linear (default "parallel")                           
+  -workers int                                                                       
+        Number of workers if in parallel mode (default 5)    
 ```
-
-- sbom-path = path to sbom file
-- config-path = path to .json file (see config.template.json)
-- output-file-path = path to file to be written to
-- OPTIONAL number of workers = number of concurrent dependencies to be processed
-- OPTIONAL runMode = "linear" OR "parellel" processing of dependencies
 
 ### caching
 

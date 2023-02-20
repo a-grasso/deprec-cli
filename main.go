@@ -28,7 +28,7 @@ func main() {
 	logging.Logger.Info("DepRec run started...")
 
 	flag.Usage = func() {
-		fmt.Printf("Usage: %s [options] <sbomFilePath>\nOptions:\n", os.Args[0])
+		fmt.Printf("Usage: %s [options] <sbomJson>\nOptions:\n", os.Args[0])
 		flag.PrintDefaults()
 	}
 
