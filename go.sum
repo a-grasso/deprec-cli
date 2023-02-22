@@ -3,6 +3,8 @@ github.com/CycloneDX/cyclonedx-go v0.7.0 h1:jNxp8hL7UpcvPDFXjY+Y1ibFtsW+e5zyF9Qo
 github.com/CycloneDX/cyclonedx-go v0.7.0/go.mod h1:W5Z9w8pTTL+t+yG3PCiFRGlr8PUlE0pGWzKSJbsyXkg=
 github.com/a-grasso/deprec v0.0.0-20230221222803-bde66ad589d7 h1:44NuTkN5Kpw30lYXvqb+P31DX7AWVpqeRpFli4Sp4Sk=
 github.com/a-grasso/deprec v0.0.0-20230221222803-bde66ad589d7/go.mod h1:4ffYq3rf2CIGujODtMRsZj9MwuMs9Twp5uxdFflSyHE=
+github.com/a-grasso/deprec v0.0.0-20230222205527-0f5c03648bd4 h1:W/cD9toctxzMUBLYeaMszRicxavKHZZB7UKUOz1Z3Hg=
+github.com/a-grasso/deprec v0.0.0-20230222205527-0f5c03648bd4/go.mod h1:4ffYq3rf2CIGujODtMRsZj9MwuMs9Twp5uxdFflSyHE=
 github.com/ajstarks/svgo v0.0.0-20211024235047-1546f124cd8b h1:slYM766cy2nI3BwyRiyQj/Ud48djTMtMebDqepE95rw=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/bradleyjkemp/cupaloy/v2 v2.8.0 h1:any4BmKE+jGIaMpnU8YgH/I2LPiLBufr6oMMlVBbn9M=

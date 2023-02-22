@@ -48,7 +48,7 @@ func main() {
 		exitGracefully(err)
 	}
 
-	deprecClient := deprec.NewClient(config)
+	deprecClient := deprec.NewClient(*config)
 
 	runConfig := deprec.RunConfig{
 		Mode:       deprec.RunMode(input.runMode),

@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/CycloneDX/cyclonedx-go v0.7.0
-	github.com/a-grasso/deprec v0.0.0-20230221222803-bde66ad589d7
+	github.com/a-grasso/deprec v0.0.0-20230222205527-0f5c03648bd4
 )
 
 require (
