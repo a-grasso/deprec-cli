@@ -71,8 +71,8 @@
   },
   "ProjectQuality": {
     "Weights": {
-      "ReadMe": 1,
-      "License": 1,
+      "ReadMe": 2,
+      "License": 2,
       "About": 1,
       "AllowForking": 1
     }
@@ -140,8 +140,8 @@
     "ClosingTimeLimit": 2,
     "BurnPercentile": 20,
     "Weights": {
-      "AverageClosingTime": 2,
-      "Burn": 2
+      "AverageClosingTime": 1,
+      "Burn": 1
     }
   },
   "Engagement": {
