@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/CycloneDX/cyclonedx-go v0.7.0
-	github.com/a-grasso/deprec v0.0.0-20230222205527-0f5c03648bd4
+	github.com/a-grasso/deprec v0.0.0-20230226131140-cef06c5d14e7
 )
 
 require (
@@ -34,7 +34,6 @@ require (
 	golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be // indirect
 	golang.org/x/sync v0.0.0-20220722155255-886fb9371eb4 // indirect
 	golang.org/x/text v0.6.0 // indirect
-	gonum.org/v1/gonum v0.12.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
 )
