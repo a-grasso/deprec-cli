@@ -13,7 +13,7 @@ func Test(t *testing.T) {
 	defer func() { os.Args = oldArgs }()
 
 	os.Args = []string{
-		"", "--runMode", "parallel", "test.sbom.json",
+		"", "--runMode", "parallel", "--config", "config/config.json", "--env", "config/.env", "sboms/test.sbom.json",
 	}
 
 	main()
