@@ -40,7 +40,7 @@ docker-compose up -d
 The template.config.json is prefilled with configuration regarding tweaking of evaluation inside _deprec_.
 
 ### configuration - environment variables
-The provided template.env file has environment variables that would contain sensitive information listed. These configurations should be passed alongside rather than written down in a configuration file.
+The provided template.env file has environment variables that would contain sensitive information listed. These configurations should be passed alongside rather than written down in a static configuration file.
 
 To adjust are following configurations:
 - Extraction
