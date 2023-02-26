@@ -2,11 +2,11 @@
   "CombCon": {
     "Weights": {
       "DeityGiven": 100,
-      "Effort": 5,
-      "Circumstances": 1,
-      "Support": 1,
-      "Community": 1,
-      "Interconnectedness": 1
+      "Effort": 6.5,
+      "Circumstances": 1.5,
+      "Support": 2.5,
+      "Community": 2,
+      "Interconnectedness": 2.5
     }
   },
   "DeityGiven": {
@@ -17,22 +17,22 @@
   },
   "Circumstances": {
     "Weights": {
-      "Rivalry": 1,
-      "Licensing": 1,
+      "Rivalry": 0.5,
+      "Licensing": 1.5,
       "ProjectQuality": 1
     }
   },
   "Effort": {
     "Weights": {
-      "Recentness": 2,
-      "Activity": 2,
-      "CoreTeam": 1
+      "Recentness": 4,
+      "Activity": 1.5,
+      "CoreTeam": 0.5
     }
   },
   "Support": {
     "Weights": {
-      "Engagement": 1,
-      "Processing": 2
+      "Engagement": 2,
+      "Processing": 1.5
     }
   },
   "Community": {
@@ -44,8 +44,8 @@
   },
   "Interconnectedness": {
     "Weights": {
-      "Popularity": 1,
-      "Network": 1
+      "Popularity": 2,
+      "Network": 2
     }
   },
   "Marking": {
@@ -63,8 +63,8 @@
       "abandoned"
     ],
     "Weights": {
-      "ReadMe": 1,
-      "Archivation": 1,
+      "ReadMe": 2,
+      "Archivation": 2,
       "About": 1,
       "Artifact": 1
     }
@@ -84,12 +84,12 @@
   },
   "Rivalry": {
     "Weights": {
-      "IsLatest": 1
+      "IsLatest": 1.5
     }
   },
   "Licensing": {
     "Weights": {
-      "Repository": 1,
+      "Repository": 1.5,
       "Artifact": 2,
       "Library": 1
     }
@@ -100,9 +100,9 @@
     }
   },
   "Activity": {
-    "Percentile": 20,
+    "Percentile": 2,
     "Weights": {
-      "Commits": 3,
+      "Commits": 3.5,
       "Releases": 3,
       "Issues": 2
     }
@@ -140,7 +140,7 @@
     "ClosingTimeLimit": 2,
     "BurnPercentile": 20,
     "Weights": {
-      "AverageClosingTime": 1,
+      "AverageClosingTime": 1.5,
       "Burn": 1
     }
   },
@@ -158,15 +158,15 @@
       "Companies": 2,
       "Sponsors": 1,
       "Organizations": 2,
-      "RepositoryOrganization": 3
+      "RepositoryOrganization": 3.5
     }
   },
   "CoreTeam": {
     "ActiveContributorsPercentile": 5,
-    "ActiveContributorsThreshold": 10,
-    "CoreTeamStrengthThreshold": 10,
+    "ActiveContributorsThreshold": 20,
+    "CoreTeamStrengthThreshold": 15,
     "Weights": {
-      "ActiveContributors": 2,
+      "ActiveContributors": 2.5,
       "CoreTeamStrength": 1
     }
   }
