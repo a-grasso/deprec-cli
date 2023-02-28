@@ -18,7 +18,7 @@ Options:
   -env string                                                                        
         Environment variables file (default ".env")                                  
   -output string                                                                     
-        Output file (default "deprec-output.txt")                                    
+        Output file (default "deprec-output.csv")                                    
   -runMode string                                                                    
         Run mode - parallel or linear (default "parallel")                           
   -workers int                                                                       
