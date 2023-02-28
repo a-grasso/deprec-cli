@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/csv"
 	"errors"
 	"flag"
 	"fmt"
@@ -62,33 +63,63 @@ func main() {
 
 func writeToOutputFile(outputFile string, result *deprec.Result) {
 
-	f, err := os.Create(outputFile)
-
+	csvFile, err := os.Create(outputFile)
 	if err != nil {
 		logging.SugaredLogger.Errorf("could not create outputfile %s: %s", outputFile, err)
 	}
+	defer csvFile.Close()
 
-	defer f.Close()
-
-	f.WriteString("DEV OUTPUT\n--------\n\n")
+	csvWriter := csv.NewWriter(csvFile)
+	var records = [][]string{
+		{
+			"Dependency Name",
+			"Dependency Version",
+			"Dependency Package URL",
+			"Extracted Data Sources",
+			"Used EOS Factors",
+			"Recommendation Distribution",
+			"Decision Making",
+			"Watchlist",
+			"No Immediate Action",
+			"No Concerns",
+		},
+	}
 
 	for _, r := range result.Results {
-		_, err = f.WriteString(fmt.Sprintf("%s:%s --%s ||| %s->> %s\n\n", r.Dependency.Name, r.Dependency.Version, r.DataSources, r.UsedCores(), r.RecommendationsInsights()))
+		record := []string{
+			fmt.Sprintf("%s", r.Dependency.Name),
+			fmt.Sprintf("%s", r.Dependency.Version),
+			fmt.Sprintf("%s", r.Dependency.PackageURL),
+			fmt.Sprintf("%s", r.DataSources),
+			fmt.Sprintf("%s", r.UsedFirstLevelCores()),
+			fmt.Sprintf("%s", r.RecommendationsInsights()),
+			fmt.Sprintf("%.4f", r.Recommendations[model.DecisionMaking]),
+			fmt.Sprintf("%.4f", r.Recommendations[model.Watchlist]),
+			fmt.Sprintf("%.4f", r.Recommendations[model.NoImmediateAction]),
+			fmt.Sprintf("%.4f", r.Recommendations[model.NoConcerns]),
+		}
 
+		records = append(records, record)
+	}
+
+	for _, record := range records {
+		err = csvWriter.Write(record)
 		if err != nil {
 			logging.SugaredLogger.Errorf("could not write to outputfile %s: %s", outputFile, err)
 		}
 	}
+
+	csvWriter.Flush()
 }
 
 func getInput() (*CommandLineInput, error) {
-	if len(os.Args) < 3 {
+	if len(os.Args) < 2 {
 		return &CommandLineInput{}, errors.New("cli argument error: SBOM file argument required")
 	}
 
 	config := flag.String("config", "config.json", "Evaluation config file")
 	env := flag.String("env", ".env", "Environment variables file")
-	output := flag.String("output", "deprec-output.txt", "Output file")
+	output := flag.String("output", "deprec-output.csv", "Output file")
 	workers := flag.Int("workers", 5, "Number of workers if in parallel mode")
 	runMode := flag.String("runMode", "parallel", "Run mode - parallel or linear")
 
