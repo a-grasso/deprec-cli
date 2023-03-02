@@ -1,5 +1,5 @@
 # deprec-cli
-CLI tool for using deprec
+CLI tool for using [deprec](https://github.com/a-grasso/deprec)
 
 ## installation
 
