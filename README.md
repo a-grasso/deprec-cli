@@ -52,7 +52,8 @@ cp config-templates/template.env .env
 ##  you can ignore all others for now, see further below for more information environment variables/caching
 
 ## run deprec-cli
-## the config.json and .env are recognized by deprec-cli if they are on the same directory, so it is not necessary to specify the parameters explicitly
+## the config.json and .env are recognized by deprec-cli if they are on the same directory, 
+## so it is not necessary to specify the parameters explicitly here
 ./deprec-cli_Linux_x86_64 sbom.json
 ```
 
