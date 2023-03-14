@@ -19,9 +19,8 @@ chmod +x deprec-cli_Linux_x86_64 # maybe necessary
 
 ## quick start
 
-Trying out deprec-cli/deprec, you can run deprec-cli on the sbom created from this very project:
+Trying out deprec-cli/deprec, you can run deprec-cli on the sbom created from this very project, one of the supplied ones or one of your own. Steps below run deprec-cli on a sbom created from this very project:
 
-run following commands:
 ```bash
 ## requires Go 1.18 or newer!!!
 
@@ -32,16 +31,23 @@ go install github.com/CycloneDX/cyclonedx-gomod@v1.0.0
 git clone https://github.com/a-grasso/deprec-cli.git
 cd deprec-cli
 
-## crate a sbom for this project with cyclonedx-gomod
+## create a sbom for this project with cyclonedx-gomod
 cyclonedx-gomod app > sbom.json
 
 ## install deprec-cli
 wget -q https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_Linux_x86_64
 chmod +x deprec-cli_Linux_x86_64
 
-## copy env variable template
+## copy the supplied configuration template file
+cp config-templates/template.config.json config.json
+
+## copy the supplied env variable template file
+## we leave the deprec configuration file as is for now, see further below for deprec configuration possibilities
 cp config-templates/template.env .env
-##  fill out env variables as good as possible -> you can ignore the cache for now, see caching below for further information
+
+##  fill out env variables as good as possible 
+##  most important for now is that you at least provide a GitHub token
+##  you can ignore all others for now, see further below for more information environment variables/caching
 
 ## run deprec-cli
 ./deprec-cli_Linux_x86_64 sbom.json
