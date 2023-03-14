@@ -7,6 +7,8 @@ CLI tool for using [deprec](https://github.com/a-grasso/deprec)
 2. [Quick Start](#quick-start)
 3. [Usage](#usage)
     1. [Caching](#caching)
+    2. [Configuration - Deprec Evaluation](#configuration---evaluation)
+    3. [Configuration - Environment Variables](#configuration---environment-variables)
 4. [Local Build](#local-build)
 
 
