@@ -1,6 +1,14 @@
 # deprec-cli
 CLI tool for using [deprec](https://github.com/a-grasso/deprec)
 
+# Table Of Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+    1. [Caching](#caching)
+3. [Local Build](#local-build)
+
+
 ## installation
 
 ```bash
