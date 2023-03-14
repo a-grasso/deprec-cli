@@ -35,7 +35,10 @@ cd deprec-cli
 
 ## create a sbom for this project with cyclonedx-gomod
 cyclonedx-gomod app > sbom.json
+```
 
+if you have your own SBOM, start here:
+```bash
 ## install deprec-cli
 wget -q https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_Linux_x86_64
 chmod +x deprec-cli_Linux_x86_64
@@ -51,7 +54,7 @@ cp config-templates/template.env .env
 ##  most important for now is that you at least provide a GitHub token
 ##  you can ignore all others for now, see further below for more information environment variables/caching
 
-## run deprec-cli
+## run deprec-cli with your sbom
 ## the config.json and .env are recognized by deprec-cli if they are on the same directory, 
 ## so it is not necessary to specify the parameters explicitly here
 ./deprec-cli_Linux_x86_64 sbom.json
