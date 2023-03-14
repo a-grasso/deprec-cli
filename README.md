@@ -4,9 +4,10 @@ CLI tool for using [deprec](https://github.com/a-grasso/deprec)
 # Table Of Contents
 
 1. [Installation](#installation)
-2. [Usage](#usage)
+2. [Quick Start](#quick-start)
+3. [Usage](#usage)
     1. [Caching](#caching)
-3. [Local Build](#local-build)
+4. [Local Build](#local-build)
 
 
 ## installation
@@ -14,6 +15,36 @@ CLI tool for using [deprec](https://github.com/a-grasso/deprec)
 ```bash
 wget -q https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_Linux_x86_64
 chmod +x deprec-cli_Linux_x86_64 # maybe necessary
+```
+
+## quick start
+
+Trying out deprec-cli/deprec, you can run deprec-cli on the sbom created from this very project:
+
+run following commands:
+```bash
+## requires Go 1.18 or newer!!!
+
+## install cyclonedx-gomod to create a sbom from golang projects
+go install github.com/CycloneDX/cyclonedx-gomod@v1.0.0
+
+## clone this project
+git clone https://github.com/a-grasso/deprec-cli.git
+cd deprec-cli
+
+## crate a sbom for this project with cyclonedx-gomod
+cyclonedx-gomod app > sbom.json
+
+## install deprec-cli
+wget -q https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_Linux_x86_64
+chmod +x deprec-cli_Linux_x86_64
+
+## copy env variable template
+cp config-templates/template.env .env
+##  fill out env variables as good as possible -> you can ignore the cache for now, see caching below for further information
+
+## run deprec-cli
+./deprec-cli_Linux_x86_64 sbom.json
 ```
 
 ## usage
