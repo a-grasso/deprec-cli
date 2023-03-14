@@ -40,11 +40,11 @@ cyclonedx-gomod app > sbom.json
 wget -q https://github.com/a-grasso/deprec-cli/releases/latest/download/deprec-cli_Linux_x86_64
 chmod +x deprec-cli_Linux_x86_64
 
-## copy the supplied configuration template file
+## copy the provided configuration template file
 cp config-templates/template.config.json config.json
 
-## copy the supplied env variable template file
-## we leave the deprec configuration file as is for now, see further below for deprec configuration possibilities
+## copy the provided env variable template file
+## we leave the deprec evaluation configuration file as is for now, see further below for more information
 cp config-templates/template.env .env
 
 ##  fill out env variables as good as possible 
@@ -52,6 +52,7 @@ cp config-templates/template.env .env
 ##  you can ignore all others for now, see further below for more information environment variables/caching
 
 ## run deprec-cli
+## the config.json and .env are recognized by deprec-cli if they are on the same directory, so it is not necessary to specify the parameters explicitly
 ./deprec-cli_Linux_x86_64 sbom.json
 ```
 
